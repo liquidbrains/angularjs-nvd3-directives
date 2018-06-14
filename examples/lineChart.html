@@ -6,7 +6,8 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF8">
     <script src="js/angular.js"></script>
     <script src="js/d3.js"></script>
-    <script src="js/nv.d3.js"></script>
+    <script src="../build/components/nvd3/nv.d3.js"></script>
+    <!-- <script src="js/nv.d3.js"></script> -->
     <script src="js/moment.js"></script>
     <script src="../dist/angularjs-nvd3-directives.js"></script>
     <link rel="stylesheet" href="stylesheets/nv.d3.css"/>
@@ -26,6 +27,7 @@
                 }];
             $scope.legendColorFunction = function(){
                 return function(d){
+                    console.log(d);
                     return '#E01B5D';
                 }
             };
@@ -42,8 +44,10 @@
         showYAxis="true"
         width="600"
         height="400"
+        yaxisticks="11"
+        xaxisticks="6"
         tooltips="true"
-        useInteractiveGuideline="true"
+        useInteractiveGuideLine="true"
         showLegend="true"
         legendColor="legendColorFunction()">
     </nvd3-line-chart>

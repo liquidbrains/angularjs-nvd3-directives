@@ -3,7 +3,7 @@ function configureXaxis(chart, scope, attrs) {
 		chart.xAxis.orient(attrs.xaxisorient);
 	}
 	if (attrs.xaxisticks) {
-		chart.xAxis.scale().ticks(attrs.xaxisticks);
+		chart.xAxis.ticks( scope.xaxisticks() );
 	}
 	if (attrs.xaxistickvalues) {
 		if (Array.isArray(scope.$eval(attrs.xaxistickvalues))) {
@@ -75,7 +75,7 @@ function configureX2axis (chart, scope, attrs) {
 		chart.x2Axis.orient(attrs.x2axisorient);
 	}
 	if (attrs.x2axisticks) {
-		chart.x2Axis.scale().ticks(attrs.x2axisticks);
+		chart.x2Axis.ticks( scope.x2axisticks() );
 	}
 	if (attrs.x2axistickvalues) {
 		if (Array.isArray(scope.$eval(attrs.x2axistickvalues))) {
@@ -147,7 +147,7 @@ function configureYaxis (chart, scope, attrs) {
 		chart.yAxis.orient(attrs.yaxisorient);
 	}
 	if (attrs.yaxisticks) {
-		chart.yAxis.scale().ticks(attrs.yaxisticks);
+		chart.yAxis.ticks( scope.yaxisticks() );
 	}
 	if (attrs.yaxistickvalues) {
 		if (Array.isArray(scope.$eval(attrs.yaxistickvalues))) {
@@ -216,7 +216,7 @@ function configureYaxis (chart, scope, attrs) {
 
 function configureY1axis (chart, scope, attrs) {
 	if (attrs.y1axisticks) {
-		chart.y1Axis.scale().ticks(attrs.y1axisticks);
+		chart.y1Axis.ticks( scope.y1axisticks() );
 	}
 	if (attrs.y1axistickvalues) {
 		if (Array.isArray(scope.$eval(attrs.y1axistickvalues))) {
@@ -285,7 +285,7 @@ function configureY1axis (chart, scope, attrs) {
 
 function configureY2axis (chart, scope, attrs) {
 	if (attrs.y2axisticks) {
-		chart.y2Axis.scale().ticks(attrs.y2axisticks);
+		chart.y2Axis.ticks( scope.y2axisticks() );
 	}
 	if (attrs.y2axistickvalues) {
 		chart.y2Axis.tickValues(scope.$eval(attrs.y2axistickvalues));
